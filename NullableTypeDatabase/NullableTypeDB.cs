@@ -79,73 +79,6 @@ namespace NullableTypeDatabase
 
 
 
-
-        //public static int AddNewEmployee2(string fname, string lname, bool? maritalStat, int? age)
-        //{
-
-        //    int returnAffectedRow;
-
-        //    SqlConnection con = GetConnection();
-        //    string queryStatement = "INSERT INTO Employee(firstname, lastname, married, age) VALUES (@fname, @lname, @maritalStat, @age)";
-        //    SqlCommand sqlCmd = new SqlCommand(queryStatement, con);
-        //    sqlCmd.Parameters.AddWithValue("@fname", fname);
-        //    sqlCmd.Parameters.AddWithValue("@lname", lname);
-
-        //    if (maritalStat == true)
-        //    {
-        //        string convertIndex0 = "True";
-        //        sqlCmd.Parameters.AddWithValue("@maritalStat", convertIndex0);
-        //    }
-
-        //    if (maritalStat == false)
-        //    {
-        //        string convertIndex1 = "False";
-        //        sqlCmd.Parameters.AddWithValue("@maritalStat", convertIndex1);
-        //    }
-
-        //    else if(maritalStat == null)
-        //    {
-        //        sqlCmd.Parameters.AddWithValue("@maritalStat", DBNull.Value);
-        //    }
-
-
-
-        //    if (age.Value == 0)
-        //    {
-        //        sqlCmd.Parameters.AddWithValue("@age", DBNull.Value);
-        //    }
-        //    else
-        //    {
-        //        sqlCmd.Parameters.AddWithValue("@age", age.Value);
-        //    }
-
-        //    try
-        //    {
-        //        con.Open();
-        //        returnAffectedRow = sqlCmd.ExecuteNonQuery();
-
-        //    }
-        //    catch (SqlException ex)
-        //    {
-
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        con.Close();
-        //    }
-        //    return returnAffectedRow;
-        //}
-
-
-
-
-
-
-
-
-
-
         public static List<Employee> GetEmployees()
         {
             List<Employee> empListToReturn = new List<Employee>();
@@ -162,17 +95,6 @@ namespace NullableTypeDatabase
                     emp.FirstName = reader[0].ToString();
                     emp.LastName = reader[1].ToString();
 
-                    ////EX1
-                    //if (reader.IsDBNull(reader.GetOrdinal("age")))
-                    //{
-                    //    emp.Age = null;
-                    //}
-                    //else
-                    //{
-                    //    emp.Age = reader.GetInt32(reader.GetOrdinal("age"));
-                    //}
-
-                    //EX2
                     if (reader["age"] == DBNull.Value)
                         emp.Age = null;
                     else
