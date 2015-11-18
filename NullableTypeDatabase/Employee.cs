@@ -8,15 +8,12 @@ namespace NullableTypeDatabase
 {
     public class Employee
     {
-        int empID;
-        string firstName;
-        string lastName;
-        int? married;
-        int? age;
-        //bool? married;
-
-
-
+        private int empID;
+        private string firstName;
+        private string lastName;
+        private int? married;
+        private int? age;
+        
 
         public int EmpID
         {
