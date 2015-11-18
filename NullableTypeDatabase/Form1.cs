@@ -1,14 +1,3 @@
-﻿https://www.youtube.com/watch?v=gAWiXbT599E
-https://www.youtube.com/watch?v=E8TXME3bzNs
-https://www.youtube.com/watch?v=u12zHGRfiKU
-https://www.youtube.com/results?search_query=how+to+use+git+on+windows+with+github
-https://www.youtube.com/playlist?list=PLvAOICvbvsbnc5dLG0YR9Mq_tFfzAhQSp
-https://www.youtube.com/watch?v=pp2S2lHjzZI
-https://www.youtube.com/watch?v=pp2S2lHjzZI
-https://www.youtube.com/watch?v=r63f51ce84A
-https://www.youtube.com/watch?v=73I5dRucCds
-
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
